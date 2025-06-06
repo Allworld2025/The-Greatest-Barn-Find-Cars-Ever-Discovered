@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0e1a;
+    background-image: url('https://www.transparenttextures.com/patterns/metal.png');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #d1d5db;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header-bg {
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    color: white;
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: slideDown 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
+    background-color: #293548;
+}
+
+.card h2 {
+    transition: color 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
+}
+
+.card:hover h2 {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+a {
+    transition: color 0.4s ease-in-out, text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+a:hover {
+    color: #93c5fd;
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
+    transform: translateY(-2px);
+}
+
+.text-neon-blue {
+    color: #60a5fa;
+}
+
+.text-silver {
+    color: #d1d5db;
+}
+
+.bg-dark-blue {
+    background-color: #1e293b;
+}
+
+.bg-dark-blue:hover {
+    background-color: #293548;
+}
+
+@media (max-width: 640px) {
+    .header-bg {
+        background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+    }
+    .card {
+        margin: 0 0.5rem;
+    }
+}
+
+footer {
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+footer:hover {
+    background-color: #293548;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
